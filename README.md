@@ -41,7 +41,7 @@ Screenshots:
 ## Deployed Application:
 
 * LIVE URL -https://flipped-dating.herokuapp.com/
-* Github : https://github.com/LanguageBytes/Flipped-Dating-App
+
 
 ## Usage 
 
