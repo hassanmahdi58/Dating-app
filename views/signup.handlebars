@@ -1,0 +1,169 @@
+<header>
+
+  {{> public-navbar}}
+
+</header>
+
+
+
+{{!-- Sign up Form --}}
+<main class="container">
+  <div class="mx-auto my-4 jumbotron-styling">
+    <h1 class="text-center signup-header">Sign up</h1>
+    <hr />
+
+    <form id="signup-form" class="p-4">
+
+      {{!-- Name --}}
+      <div class="row">
+        <div class="mb-3 col-md-6 col-12">
+             
+          <label for="name-input" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name-input" />
+          <div class="form-text error" id="name-error"></div>
+        </div>
+          
+      {{!-- Contact Information (Email)--}}
+        <div class="mb-3 col-md-6 col-12">
+          <label for="email-input" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email-input" />
+          <div class="form-text error" id="email-error"></div>
+        </div>
+      </div>
+     
+     {{!-- Password --}}
+      <div class="row">
+        <div class="mb-3 col-md-6 col-12">
+          
+        {{!-- Enter Password, if password does not meet criteria, throw an error --}}
+          <label for="password-input" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password-input" />
+          <div class="form-text error" id="password-error"></div>
+        </div>
+           
+        {{!-- Enter Password, if passwords do not match, throw an error --}}
+        <div class="mb-3 col-md-6 col-12">
+          <label for="confirm-password-input" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword-input" />
+          <div class="form-text error" id="confirmPassword-error"></div>
+        </div>
+      </div>
+
+      <div class="row">
+      {{!-- Age --}}
+        <div class="mb-3 col-md-6 col-12">
+          <label for="age-input" class="form-label">Age</label>
+          <input type="number" class="form-control" id="age-input" />
+          <div class="form-text error" id="age-error"></div>
+        </div>
+
+        {{!-- Location --}}
+        <div class="mb-3 col-md-6 col-12">
+          <label for="location-input" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location-input" />
+          <div class="form-text error" id="location-error"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-6 col-12">
+          {{!-- Build --}}
+          <label class="form-label" for="build-input">Body Shape</label>
+          <select class="form-select" id="build-input">
+
+            <option disabled> Build </option>
+            <option value="Slim">Slim</option>
+            <option value="Athletic">Athletic</option>
+            <option value="Medium">Medium</option>
+            <option value="Curvy">Curvy</option>
+          </select>
+          <div class="form-text error" id="build-error"></div>
+        </div>
+
+        {{!-- Height --}}
+        <div class="mb-3 col-md-6 col-12">
+          <label for="height-input" class="form-label">Height (Metres)</label>
+          <input type="number" step="0.01" value="1.25" min="0" class="form-control form-select" id="height-input" />
+          <div class="form-text error" id="height-error"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-12">
+
+          {{!--Sexuality and Preferences--}}
+          <label class="visually-hidden" for="autoSizingSelect"> Gender</label>
+          <select class="form-select" id="gender-input">
+
+            <option disabled> Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Non-Binary"> Non-Binary</option>
+
+          </select>
+          <div class="form-text error" id="gender-error"></div>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <label class="visually-hidden" for="autoSizingSelect"> Sexuality Preference</label>
+          <select class="form-select" id="sexuality-input">
+
+            <option disabled> Sexuality</option>
+            <option value="Straight">Straight</option>
+            <option value="Bisexual">Bisexual</option>
+            <option value="Gay">Gay</option>
+            <option value="Other">Non-Binary</option>
+          </select>
+          <div class="form-text error" id="sexuality-error"></div>
+        </div>
+
+       {{!-- Intentions --}}
+        <div class="col-md-4 col-12">
+          <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+          <select class="form-select" id="seriousness-input">
+
+            <option disabled> Intentions</option>
+            <option value="Casual">Casual</option>
+            <option value="Relationship">Relationship</option>
+            <option value="Friendship">Friendship</option>
+
+          </select>
+          <div class="form-text error" id="seriousness-error"></div>
+      </div>
+
+
+      {{!-- About --}}
+      <div class="row">
+          <div class="mb-3">
+            <label for="about-input" class="form-label mt-4">About Me </label>
+            <textarea cols="30" rows="10" type="text" class="form-control" id="about-input"></textarea>
+            <div class="form-text error" id="about-error"></div>
+          </div>
+      </div>
+
+     {{!-- Interests --}}
+      <div class="row">
+          <div class="mb-3">
+            <label for="interests-input" class="form-label mt-4">Interests </label>
+            <textarea cols="30" rows="10" type="text" class="form-control" id="interests-input"></textarea>
+            <div class="form-text error" id="interests-error"></div>
+          </div>
+      </div> 
+      
+      {{!-- Image --}}
+      <div class="row">
+          <div class="mb-3">
+            <label for="img-input" class="form-label mt-4">Insert Profile Picture</label>
+            <input type="text" class="form-control" id="img-input" />
+            <div class="form-text error" id="img-error"></div>
+          </div>
+        </div>
+
+     {{!-- Submit form --}}
+      <button type="submit" class="btn btn-styling">
+          I'm ready!
+      </button>
+      
+    </form>
+  </div>
+</main>

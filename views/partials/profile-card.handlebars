@@ -1,0 +1,36 @@
+<div
+  class="profile-card card mx-auto m-5"
+  style="width: 18rem;"
+  id="profile-card"
+>
+  <div class="card-summary">
+    <h5 class="profile-name">{{matchUser.name}}, <b>{{matchUser.age}}</b></h5>
+    <h6 class="profile-location"><small>{{location}}</small></h6>
+  </div>
+  <a href="/profile/{{matchUser.id}}">
+    <img class="card-img-top" src="{{matchUser.img}}" alt="Card image cap" />
+  </a>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6"><b>Height:</b></div>
+      <div class="col-6">{{matchUser.height}} m</div>
+      <div class="w-100"></div>
+      <div class="col-6"><b>Build:</b></div>
+      <div class="col-6">{{matchUser.build}}</div>
+      <div class="w-100"></div>
+      <div class="col-6"><b>Intention:</b></div>
+      <div class="col-6">{{matchUser.seriousness}}</div>
+    </div>
+    <hr />
+    <div class="profile-bio mt-2">{{matchUser.aboutMe}}</div>
+    <hr />
+    <button
+      class="btn btn-styling"
+      data-matchId="{{matchId}}"
+      id="delete-user-match"
+    >
+      Un-match
+    </button>
+  </div>
+</div>

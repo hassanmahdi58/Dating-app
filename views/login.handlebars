@@ -1,0 +1,32 @@
+<header>
+  {{> public-navbar}}
+</header>
+
+{{!-- LOGIN FORM --}}
+<main class="container">
+  <div class="mx-auto my-4 jumbotron-styling">
+    <h3 class="text-center subheading-txt">How do you feel about grapes? How about a date?</h3>
+    <br>
+    <h2 class="subheading-txt">Sign in</h2>
+    <hr />
+    <form id="login-form" class="p-4">
+      <div class="mb-3">
+
+        {{!-- Will take the input from the user for authorisation--}}
+        <label for="email-input" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="password-input" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password-input" />
+      </div>
+
+      <div class="mb-3">
+      <button type="submit" class="btn btn-styling">Login</button>
+
+      {{!-- If there is an error, will be displayed --}}
+      <div class="form-text error" id="login-error"></div>
+    </form>
+  </div>
+</main>

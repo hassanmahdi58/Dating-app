@@ -1,0 +1,56 @@
+<header>
+  {{> private-navbar}}
+</header>
+
+<main class="container mt-4">
+  <div class="updateModal-container"></div>
+  {{!-- User info section --}}
+  <section class="jumbotron-styling">
+    <div class="row">
+      <div class="col-sm">
+        <div class="p-2">
+          <img src="{{user.img}}" alt="" class="profile-img" />
+        </div>
+        <div class="p-2 text-center">
+          <h2>{{user.name}}, {{user.age}}</h2>
+          <h3 class="fs-5">{{user.location}}</h3>
+          <div><h4 class="fs-5"> Intention: {{user.seriousness}}</h4></div>
+          <div>
+            <button class="btn-styling mt-4 p-3" id="{{user.id}}" name="updateBtn">
+              Update Profile
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm pt-4 px-4">
+        <div class="p-2">
+          <h3 class="pb-4">My Details</h3>
+          <p><strong>Height: </strong>{{user.height}} m</p>
+          <p><strong>Body Shape: </strong>{{user.build}}</p>
+          <p><strong>Gender: </strong>{{user.gender}}</p>
+          <p><strong>Sexuality: </strong>{{user.sexuality}}</p>
+        </div>
+        <div class="p-2">
+          <h3 class="mt-4 pb-4">About Me</h3>
+          <p>{{user.about}}</p>
+           <h3 class="mt-4 pb-4">My Interests</h3>
+           <p>{{user.interests}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Matches section --}}
+  <section class="mt-4">
+    <h1 class="text-center text-black">{{user.name}}'s Matches</h3>
+    <div class="d-flex flex-wrap justify-content-center">
+      {{#if matches.length}}
+      {{#each matches}}
+      {{> profile-card}}
+      {{/each}}
+      {{else}}
+      <h3 class="text-black">{{user.name}} has no matches yet... </h1>
+      {{/if}}
+    </div>
+  </section>
+</main>

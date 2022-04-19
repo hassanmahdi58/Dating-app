@@ -1,0 +1,52 @@
+<header>
+  {{> private-navbar}}
+</header>
+
+<main class="container mt-4">
+  <div class="updateModal-container"></div>
+  {{!-- User info section --}}
+  <section class="jumbotron-styling">
+    <div class="row">
+      <div class="col-sm">
+        <div class="p-2">
+          <img src="{{user.img}}" alt="" class="profile-img" />
+        </div>
+        <div class="p-2 text-center">
+          <h2>{{user.name}}, {{user.age}}</h2>
+          <h3 class="fs-5">{{user.location}}</h3>
+          <div><h4 class="fs-5"> Intention: {{user.seriousness}}</h4></div>
+        </div>
+      </div>
+      <div class="col-sm pt-4 px-4">
+        <div class="p-2">
+          <h3 class="pb-4">My Details</h3>
+          <p><strong>Height: </strong>{{user.height}} m</p>
+          <p><strong>Body Shape: </strong>{{user.build}}</p>
+          <p><strong>Gender: </strong>{{user.gender}}</p>
+          <p><strong>Sexuality: </strong>{{user.sexuality}}</p>
+        </div>
+        <div class="p-2">
+          <h3 class="mt-4 pb-4">About Me</h3>
+          <p>{{user.about}}</p>
+           <h3 class="mt-4 pb-4">My Interests</h3>
+           <p>{{user.interests}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div>
+            <button class="btn-styling mt-4 p-3" data-matchId="{{user.id}}" id="back-to-profile">
+              Back
+            </button>
+    </div>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    > </script>
+
+    <script type="text/javascript" src="../js/index.js"></script>
